@@ -1,0 +1,55 @@
+<header class="site-header flex flex--bet">
+   
+    <nav class="gnav">
+        <div class="gnav__menu flex flex--bet">
+            <div class="gnav__menu__item">
+            <%= link_to "新規投稿へ", new_bubble_path, class: "gnav__menu__item__link"  %>
+            </div>
+            <div class="gnav__menu__item">
+            <%= link_to "マイページ", user_path(current_user.id), class: "gnav__menu__item__link"  %>
+            </div>
+            <div class="gnav__menu__item">
+            <%= link_to "フォルダ一覧", folders_path, class: "gnav__menu__item__link" %>
+            </div>
+            <div class="gnav__menu__item">
+            <%= link_to "イベント", events_path, class: "gnav__menu__item__link" %>
+            </div>
+            <div class="gnav__menu__item">
+            <%= link_to "Bubble一覧に戻る", bubbles_path, class: "gnav__menu__item__link" %>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<br>
+<%= form_for @bubble do |b| %>
+	<div class="field">
+		<%= b.label :title %>
+		<%= b.text_field :title, :size => 140 %>
+	</div>
+
+	<div class="field">
+		<%= b.label :label %>
+		<%= b.text_field :label, :size => 140 %>
+	</div>
+
+<div class="field">
+	<%= b.label :link %>
+	<%= b.text_field :link, :size => 140 %>
+</div>
+
+<div class="field">
+			<%= b.label :image %>
+			<%= b.file_field :image %>
+</div>
+
+<div class="field">
+	<%= b.label :content %>
+	<%= b.text_field :content, :size => 140 %>
+</div>
+
+
+
+  <%= b.submit "編集する" %>
+<% end %>
+	

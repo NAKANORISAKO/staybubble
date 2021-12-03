@@ -1,0 +1,294 @@
+// Place all the styles related to the bubbles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1800px) {
+
+	
+
+//  .bubbles-container {
+//  width: 90%;
+// 	 margin-left: auto;
+// 	 margin-right: auto;
+
+// 	display: flex;
+// 	flex-direction: row;
+// 	flex-wrap: wrap;
+// 	align-content: flex-start;
+// }
+
+.bubbles-container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+	flex-wrap: wrap;
+	display: flex;
+	justify-content: space-between;
+	align-items: top;
+}
+
+.bubbles-container .bubble {
+	width: 250px;
+	width: 250px;
+	height: 320px;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-bottom: 8px;
+	margin-top: 8px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border: 3px solid;
+	border-color: rgba(125, 93, 138, 0.5);
+	border-radius: 20px;
+	position: relative;
+	overflow: hidden;
+ -moz-box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ -ms-box-sizing: border-box;
+}
+
+
+.who {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+
+
+	.user_pic {
+		border: 1px solid #E05858;
+		width:  50px;       /* ※縦横を同値に */
+		height: 50px;      /* ※縦横を同値に */
+		margin-right: 15px;
+			border-radius: 50%;
+			overflow: hidden; 
+			background-position: center center; 
+			object-fit:cover;
+			display: flex;
+	}
+
+.imagepic {
+	width: 224px;
+	height: 200px;
+	object-fit: cover;
+}
+
+.bubble:hover {
+	transition: .1s;
+	text-decoration: none;
+}
+
+.bubble ul {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	transform: scale(0);
+	transition: .0s;
+	opacity: 0;
+	background-color: rgba(255,255,255,0.8);
+	padding: 0px;
+	box-sizing: border-box;
+
+}
+
+.bubble:hover ul {
+	transform: scale(1);
+	transition: .1s;
+	opacity: 1;
+
+}
+
+.bubble ul li {
+	display: block;
+	background-size: 3px auto;
+	padding: 10px;
+
+	
+}
+
+
+.btn {
+  display: inline-block;
+  background-color: rgba(215, 175, 231, 0.945);
+  width: 160px;
+  padding: 0.8em;
+  text-decoration: none;
+  border-radius: 50px;
+	border: none;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  -webkit-tap-highlight-color: transparent;
+  transition: .3s ease-out;
+}
+.btn:hover{
+	 cursor: pointer;
+	 text-decoration: none;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.12), 0 3px 20px 0 rgba(0,0,0,0.12), 0 5px 6px -2px rgba(0,0,0,0.2);
+}
+
+
+a {
+	text-decoration: none;
+}
+
+
+
+}
+
+/*スマホ表示時*/
+@media (max-width: 580px) {
+
+
+	
+	.bubbles-container {
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: flex-star t;
+	 }
+ 
+.bubble {
+	width: 185px;
+	height: 360px;
+	margin-right: 10px;
+	margin-left: 10px;
+	padding-bottom: 16px;
+	padding-left: 8px;
+	padding-right: 8px;
+	border: 3px solid;
+	border-radius: 10px;
+	border-color: rgb(119, 119, 119);
+  border-radius: 240px 15px 100px 15px / 15px 200px 15px 185px;
+	position: relative;
+	overflow: hidden;
+
+}
+
+
+.image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.bubble:hover {
+	transition: .1s;
+}
+
+.bubble ul {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	transform: scale(0);
+	transition: .0s;
+	opacity: 0;
+	background-color: rgba(255,255,255,0.8);
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+.bubble:hover ul {
+	transform: scale(1);
+	transition: .1s;
+	opacity: 1;
+}
+
+.bubble ul li {
+	display: block;
+	background-size: 3px auto;
+	padding: 10px
+}
+
+.bubble ul li:hover {
+	background-color: rgba(255,255,255,0.9);
+}
+
+.image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.bubble:hover {
+	transition: .1s;
+}
+
+.bubble ul {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	transform: scale(0);
+	transition: .0s;
+	opacity: 0;
+	background-color: rgba(255,255,255,0.8);
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+.bubble:hover ul {
+	transform: scale(1);
+	transition: .1s;
+	opacity: 1;
+}
+
+
+.bubble ul li {
+	display: block;
+	background-size: 3px auto;
+	padding: 10px
+}
+
+
+
+
+.btn {
+  display: inline-block;
+  background-color: rgba(215, 175, 231, 0.945);
+  width: 160px;
+  padding: 0.8em;
+  text-decoration: none;
+  border-radius: 4px;
+	border: none;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  -webkit-tap-highlight-color: transparent;
+  transition: .3s ease-out;
+}
+.btn:hover{
+	 cursor: pointer;
+	 text-decoration: none;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.12), 0 3px 20px 0 rgba(0,0,0,0.12), 0 5px 6px -2px rgba(0,0,0,0.2);
+}
+
+	
+}

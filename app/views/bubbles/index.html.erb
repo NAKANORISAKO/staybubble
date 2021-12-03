@@ -1,0 +1,86 @@
+
+
+
+<header class="site-header flex flex--bet">
+   
+<nav class="gnav">
+		<div class="gnav__menu flex flex--bet">
+				<div class="gnav__menu__item">
+				<%= link_to "新規投稿へ", new_bubble_path, class: "gnav__menu__item__link"  %>
+				</div>
+				<div class="gnav__menu__item">
+				<%= link_to "マイページ", user_path(current_user.id), class: "gnav__menu__item__link"  %>
+				</div>
+				<div class="gnav__menu__item">
+				<%= link_to "フォルダ一覧", folders_path, class: "gnav__menu__item__link" %>
+				</div>
+				<div class="gnav__menu__item">
+				<%= link_to "イベント", events_path, class: "gnav__menu__item__link" %>
+				</div>
+				<div class="gnav__menu__item">
+				<%= link_to "Bubble一覧に戻る", bubbles_path, class: "gnav__menu__item__link" %>
+				</div>
+		</div>
+</nav>
+</header>
+
+
+
+<h1>STAYBubbles</h1>
+<h3>Bubble一覧</h3>
+
+
+ <%= form_tag({controller:"bubbles",action:"index"}, method: :get) do %>
+   <%= text_field_tag :search %>
+   <%= submit_tag '検索する'  %>
+<% end %>
+
+
+			<div class="bubbles-container">
+				<% @bubbles.each do |b| %>
+
+					<div class="bubble">
+						<div class="who">
+							
+								<% if b.user.image %>
+									<%= image_tag b.user.image_url, class: "user_pic" %>
+								<% else %>
+									<%= image_tag "fu.jpg" %>
+								<% end %>
+							
+						<div class="icon">
+							<p>	<%= b.user.name %></p>
+							</div>
+						</div>
+						
+						<%= image_tag b.image_url, size: "224x200", class: "imagepic" if b.image? %>
+						<%= b.title %>
+				
+					
+					
+						<ul>
+								<li class="btn"><%= link_to " 詳細", bubble_path(b.id) %></li>
+								<li class="btn"><i class="fas fa-folder-plus"></i><%= link_to "  フォルダ", controller: "posts", action:"new", id: b.id %></li>
+
+								<% if user_signed_in? && current_user.id == b.user_id %> 
+
+								<li class="btn"><i class="fas fa-pen"></i><%= link_to "  編集", edit_bubble_path(b.id) %></li>
+								<li class="btn"><i class="fas fa-trash-alt"></i><%= link_to "  削除", bubble_path(b.id), method: :delete %></li>
+							
+								<% end %>							
+						
+
+						</ul>
+					</div>
+
+				
+		
+			<% end %>
+
+		
+
+
+	
+
+	</div>
+

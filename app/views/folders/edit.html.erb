@@ -1,0 +1,28 @@
+<header class="site-header flex flex--bet">
+   
+    <nav class="gnav">
+        <div class="gnav__menu flex flex--bet">
+            <div class="gnav__menu__item">
+            <%= link_to "新規投稿へ", new_bubble_path, class: "gnav__menu__item__link"  %>
+            </div>
+            <div class="gnav__menu__item">
+            <%= link_to "マイページ", user_path(current_user.id), class: "gnav__menu__item__link"  %>
+            </div>
+            <div class="gnav__menu__item">
+            <%= link_to "フォルダ一覧", folders_path, class: "gnav__menu__item__link" %>
+            </div>
+            <div class="gnav__menu__item">
+            <%= link_to "イベント", events_path, class: "gnav__menu__item__link" %>
+            </div>
+            <div class="gnav__menu__item">
+            <%= link_to "Bubble一覧に戻る", bubbles_path, class: "gnav__menu__item__link" %>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<%= form_for @folder do |f| %>
+	<%= f.label :フォルダ名 %>
+	<%= f.text_field :folder_name, :size => 140 %> 
+  <%= f.submit "編集する" %>
+<% end %>

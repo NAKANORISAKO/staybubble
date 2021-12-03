@@ -1,0 +1,35 @@
+<header class="site-header flex flex--bet">
+   
+    <nav class="gnav">
+        <div class="gnav__menu flex flex--bet">
+            <div class="gnav__menu__item">
+            <%= link_to "新規投稿へ", new_bubble_path, class: "gnav__menu__item__link"  %>
+            </div>
+            <div class="gnav__menu__item">
+            <%= link_to "マイページ", user_path(current_user.id), class: "gnav__menu__item__link"  %>
+            </div>
+            <div class="gnav__menu__item">
+            <%= link_to "フォルダ一覧", folders_path, class: "gnav__menu__item__link" %>
+            </div>
+            <div class="gnav__menu__item">
+            <%= link_to "イベント", events_path, class: "gnav__menu__item__link" %>
+            </div>
+            <div class="gnav__menu__item">
+            <%= link_to "Bubble一覧に戻る", bubbles_path, class: "gnav__menu__item__link" %>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<% @folder.posts.each do |t| %>
+<%= Bubble.find(t.bubble_id).title %>
+<%= Bubble.find(t.bubble_id).label %>
+<%= Bubble.find(t.bubble_id).link %>
+<%= Bubble.find(t.bubble_id).date %>
+<%= Bubble.find(t.bubble_id).content %>
+<%= image_tag Bubble.find(t.bubble_id).image_url, size: "250x200" if Bubble.find(t.bubble_id).image? %>
+	<br>
+	<%= button_to "削除", post_path(t.id), method: :delete %>
+
+<% end %>
+

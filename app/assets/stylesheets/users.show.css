@@ -1,0 +1,98 @@
+
+
+h1 {
+	text-align: center;
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+	font-size: 55px;
+	margin-top: 30px;
+}
+
+.fandom {
+	background-color: rgba(215, 175, 231, 0.5);
+	margin: 5%; 
+	padding: 65px 100px;
+  height: 30%;
+	overflow: hidden;
+  display: flex;
+  flex-direction: row;
+	justify-content: space-around;
+}
+
+.fan {
+	display: flex;
+  flex-direction: column;
+	justify-content: center;
+}
+
+.name {
+	height: 80px;
+	margin-top: 20px;
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+	background-color:#E05858;
+	color:  rgb(0, 0, 0);
+	border-radius: 6%;
+	font-size: 50px;
+	text-align: center;
+
+}
+
+.mypic {
+	border: 5px solid #E05858;
+	width:  220px;       /* ※縦横を同値に */
+	height: 220px;      /* ※縦横を同値に */
+    border-radius: 50%;
+		overflow: hidden; 
+    background-position: center center; 
+		object-fit:cover;
+    display: flex;
+}
+
+.heart {
+	color: #E05858;
+	font-size: 50px;
+	display: flex;
+  justify-content: space-around;
+	align-items: center;
+ 
+}
+
+.animate__animated.animate__heartBeat {
+	--animation-delay: 1s;
+  --animate-duration: 3s;
+	--animate-repeat: 2;
+}
+
+.oshibi {
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+	font-size: 50px;
+	text-align: center;
+}
+
+
+.angel {
+	display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.oshipic {
+	border: 5px solid #E05858;
+	width:  220px;       /* ※縦横を同値に */
+	height: 220px;       /* ※縦横を同値に */
+	border-radius: 50%;
+	overflow: hidden; 
+	background-position: center center; 
+	object-fit:cover;
+	display: flex;
+}
+
+.oshi {
+	height: 80px;
+	margin-top: 20px;
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+	background-color: #E05858;
+	color:  rgba(255, 255, 255, 0.89);
+	font-size: 50px;
+	text-align: center;
+	border-radius: 6%;
+}

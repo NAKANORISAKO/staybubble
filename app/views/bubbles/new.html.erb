@@ -1,0 +1,62 @@
+<header class="site-header flex flex--bet">
+   
+    <nav class="gnav">
+        <div class="gnav__menu flex flex--bet">
+            <div class="gnav__menu__item">
+            <%= link_to "新規投稿へ", new_bubble_path, class: "gnav__menu__item__link"  %>
+            </div>
+            <div class="gnav__menu__item">
+            <%= link_to "マイページ", user_path(current_user.id), class: "gnav__menu__item__link"  %>
+            </div>
+            <div class="gnav__menu__item">
+            <%= link_to "フォルダ一覧", folders_path, class: "gnav__menu__item__link" %>
+            </div>
+            <div class="gnav__menu__item">
+            <%= link_to "イベント", events_path, class: "gnav__menu__item__link" %>
+            </div>
+            <div class="gnav__menu__item">
+            <%= link_to "Bubble一覧に戻る", bubbles_path, class: "gnav__menu__item__link" %>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+
+<div class="newbubble">
+		<%= form_for @bubble do |f| %>
+			
+			<div class="field">
+				<%= f.text_field :title, placeholder: "タイトル", :size => 50 %>
+				<%= f.label :title, "タイトル" %>
+			</div>
+
+			<div class="field">
+				<%= f.text_field :label,  placeholder: "ラベル", :size => 50 %>
+				<%= f.label :label, "ラベル" %>	
+			</div>
+
+		<div class="field">
+			<%= f.text_field :link,  placeholder: "リンク", :size => 50 %>
+			<%= f.label :link, "リンク" %>	
+		</div>
+
+		<div class="field">
+			<%= f.file_field :image ,  placeholder: "画像" %>
+			<%= f.label :image, "画像" %>			
+		</div>
+
+		<div class="field">
+			<%= f.text_area :content, :size => "50×10" %>
+			<%= f.label :content %>
+		</div>
+
+
+		<div class="send">
+			<%= f.submit "Bubble", class: "heart-button3" %>
+		</div>
+	<% end %>
+
+</div>
+
+

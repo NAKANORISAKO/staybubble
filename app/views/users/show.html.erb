@@ -1,0 +1,104 @@
+<header class="site-header flex flex--bet">
+   
+    <nav class="gnav">
+        <div class="gnav__menu flex flex--bet">
+            <div class="gnav__menu__item">
+            <%= link_to "新規投稿へ", new_bubble_path, class: "gnav__menu__item__link"  %>
+            </div>
+            <div class="gnav__menu__item">
+            <%= link_to "マイページ", user_path(current_user.id), class: "gnav__menu__item__link"  %>
+            </div>
+            <div class="gnav__menu__item">
+            <%= link_to "フォルダ一覧", folders_path, class: "gnav__menu__item__link" %>
+            </div>
+            <div class="gnav__menu__item">
+            <%= link_to "イベント", events_path, class: "gnav__menu__item__link" %>
+            </div>
+            <div class="gnav__menu__item">
+            <%= link_to "Bubble一覧に戻る", bubbles_path, class: "gnav__menu__item__link" %>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<%= stylesheet_link_tag 'users.show', :media => "all" %>
+
+<h1>MY PAGE</h1>
+
+<div class="fandom">
+
+<div class="fan">
+		<div class="mypic">	
+			<%= image_tag @user.image_url if @user.image? %>
+		</div>
+
+		<div class="name">	
+			<%= @user.name %>
+		</div>
+
+</div>
+
+	
+	<div class="love">
+		<div class="oshibi">
+		<% if @user.oshibi != nil then %>
+		<%= @date.to_i %>日</p>
+		<% end %>
+		</div>
+
+		<div class="heart">			
+			<h1 class="animate__animated animate__heartBeat animate__repeat-2"><i class="fas fa-heart"></i></h1>
+		</div>
+	</div>
+
+	<div class="angel">
+
+		<div class="oshipic">
+			<%= image_tag @user.oshiga_url if @user.oshiga? %>
+		</div>
+
+		<div class="oshi">	
+		<% if @user.oshi != nil then %>
+		<%= @user.oshi %>
+		<% end %>
+
+		</div>
+
+	</div>
+
+</div>
+
+<h1>Profile</h1>
+	 <div class="profile"> 
+	 <% if @user.profile != nil then %>
+ 			<%= @user.profile %>
+	 <% end %>
+ 	 </div>
+
+<h1>推し</h1>
+    <div class="oshiprofile">
+		<% if @user.oshiprofile != nil then %>
+		 <%= @user.oshiprofile %>
+		 <% end %>
+		</div>
+<p>推し日 : <% if @user.oshibi != nil then %><%= @user.oshibi %>	 <% end %></p>
+<p>推し期間 : <% if @user.oshibi != nil then %><%= @date.to_i %> <% end %></p>
+
+
+<% if current_user.id == @user.id %>
+	<%= link_to "編集する", edit_user_registration_path %>
+<% end %>
+
+
+
+
+<h2>ユーザーの投稿一覧</h2>
+<% @user.bubbles.each do |b| %>
+	<%= b.user.name %>
+	<%= b.content %>
+
+<% end %>
+
+<%= link_to "マイページ", edit_user_path(current_user.id) %>
+
+<%= link_to "Tweet一覧に戻る", bubbles_path %>

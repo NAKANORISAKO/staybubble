@@ -1,0 +1,44 @@
+<header class="site-header flex flex--bet">
+   
+    <nav class="gnav">
+        <div class="gnav__menu flex flex--bet">
+            <div class="gnav__menu__item">
+            <%= link_to "新規投稿へ", new_bubble_path, class: "gnav__menu__item__link"  %>
+            </div>
+            <div class="gnav__menu__item">
+            <%= link_to "マイページ", user_path(current_user.id), class: "gnav__menu__item__link"  %>
+            </div>
+            <div class="gnav__menu__item">
+            <%= link_to "フォルダ一覧", folders_path, class: "gnav__menu__item__link" %>
+            </div>
+            <div class="gnav__menu__item">
+            <%= link_to "イベント", events_path, class: "gnav__menu__item__link" %>
+            </div>
+            <div class="gnav__menu__item">
+            <%= link_to "Bubble一覧に戻る", bubbles_path, class: "gnav__menu__item__link" %>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<h1>STAYBubbles</h1>
+<h3>Bubble詳細</h3>
+<div class="bubble">
+<p><%= @bubble.created_at %></p>
+<p><%= @bubble.title %></p>
+<p><%= @bubble.label %></p>
+<p><%= @bubble.link %></p>
+<p><%= @bubble.date %></p>
+<p><%= @bubble.content %></p>
+<%= image_tag @bubble.image_url, size: "250x200" if @bubble.image? %>
+</div>
+
+<% if user_signed_in? && current_user.id == @bubble.user_id %> 
+
+<%= link_to "編集する", edit_bubble_path(@bubble.id) %>
+<%= button_to "削除", bubble_path(@bubble.id), method: :delete  %>
+
+<% end %>		
+<br>
+
+<%= link_to "Bubble一覧に戻る", bubbles_path %>

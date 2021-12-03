@@ -1,0 +1,54 @@
+<header class="site-header flex flex--bet">
+   
+    <nav class="gnav">
+        <div class="gnav__menu flex flex--bet">
+            <div class="gnav__menu__item">
+            <%= link_to "新規投稿へ", new_bubble_path, class: "gnav__menu__item__link"  %>
+            </div>
+            <div class="gnav__menu__item">
+            <%= link_to "マイページ", user_path(current_user.id), class: "gnav__menu__item__link"  %>
+            </div>
+            <div class="gnav__menu__item">
+            <%= link_to "フォルダ一覧", folders_path, class: "gnav__menu__item__link" %>
+            </div>
+            <div class="gnav__menu__item">
+            <%= link_to "イベント", events_path, class: "gnav__menu__item__link" %>
+            </div>
+            <div class="gnav__menu__item">
+            <%= link_to "Bubble一覧に戻る", bubbles_path, class: "gnav__menu__item__link" %>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<br>
+<%= link_to 'イベント追加', new_event_path %>
+<%= month_calendar events: @events do |date, events| %>
+  <%= date.day %>
+
+	<% events.each do |event| %>
+		<div class="event">
+			<% if event.mark == "誕生日" %>
+				<p><i class="fas fa-birthday-cake"></i></p>
+
+			<% elsif event.mark == "TV/ラジオ" %>
+				<p><i class="fa fa-tv"></i></p>
+
+			<% elsif event.mark == "発売日" %>
+				<p><i class="fa fa-compact-disc"></i></p>
+			
+			<% elsif event.mark == "コンサート" %>
+				<p><i class="fas fa-hand-holding-heart"></i></p>
+			
+			<% else event.mark == "デビュー日" %>
+				<p><i class="far fa-gem"></i></p>
+			
+			<% end %>
+		
+			<%= event.title %>
+		</div>
+	<% end %>
+
+
+<% end %>
+<%= link_to "Bubble一覧に戻る", bubbles_path %>
