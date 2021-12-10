@@ -28,9 +28,9 @@
 .newbubble {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 150px;
+  
   /* // position: absolute; */
-  padding-top: 0px;
+  padding-top: 150px;
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 100px;
