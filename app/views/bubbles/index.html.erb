@@ -1,5 +1,5 @@
 
-
+<div class="bubbles-bg">
 
 <header class="site-header flex flex--bet">
    
@@ -27,14 +27,19 @@
 
 
 <h1>STAYBubbles</h1>
-<h3>Bubble一覧</h3>
 
 
- <%= form_tag({controller:"bubbles",action:"index"}, method: :get) do %>
-   <%= text_field_tag :search %>
-   <%= submit_tag '検索する'  %>
+<div class="search-container">
+ <%= form_tag('/bubbles', method: :get,action:"index",class: "search-box") do %>
+   <%= text_field_tag :search,'', class: "search"
+	 %>
+	 <div class="btn5-box">
+  <%= submit_tag "" %>
+	<div  class= "btn5"><i class="fas fa-pen fa-lg"></i></div>	
+	</div>
 <% end %>
 
+</div>
 
 			<div class="bubbles-container">
 				<% @bubbles.each do |b| %>
@@ -84,3 +89,4 @@
 
 	</div>
 
+	</div>

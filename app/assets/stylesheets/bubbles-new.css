@@ -1,30 +1,48 @@
 
 
+
 .newbubble {
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;
   /* // position: absolute; */
-  padding-top: 100px;
-  padding-left: 30px;
-  padding-right: 100px;
+  padding-top: 0px;
+  padding-left: 40px;
+  padding-right: 40px;
   padding-bottom: 100px;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   background: #F9F9F9;
-  width: 360px;
-  height:250px;
+  width: 370px;
+  height:420px;
   border-radius: 3px;
   box-shadow: 0 3px 36px 0 rgba(0, 0, 0, 0.6);
   overflow: hidden;
   transition: 0.3s;
 }
-.overlay.hidden {
+.newbubble.hidden {
   visibility: hidden;
   opacity: 0;
   transform: translateY(-100px);
 }
-input {
+
+.bntop {
+  width: 360px;
+  height: 50px;
+  top: 0%;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  color: rgba(215, 175, 231, 0.945);
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 45px;
+  text-align: center;
+}
+
+
+.newbubble input[type="text"] {
   font-size: 16px;
   padding: 20px 20px;
   height: 56px;
@@ -32,6 +50,7 @@ input {
   border-bottom: solid 1px rgba(0, 0, 0,.1);
   background: #fff;
   min-width: 300px;
+  width: 370px;
   box-sizing: border-box;
   transition: all .3s linear;
   color: #000;
@@ -51,12 +70,13 @@ label {
 
 .field {
   position: relative;
-  margin-bottom: 0px;
+  
 }
 
 .field label {
   position: absolute;
   top: calc(50% - 7px);
+  left: 5px;
   opacity: 0;
   transition: all .3s ease;
 }
@@ -70,6 +90,39 @@ label {
   opacity: .7;
 }
 
+.content {
+  resize: none;
+  width: 370px;
+  height: 80px;
+  margin-top: 60px;
+}
+
+.gazou {
+  display: none;
+  margin-top: 15px;
+  margin-left: 20px;
+
+}
+.gazou-label {
+  display: block;
+  background-color:rgba(215, 175, 231, 0.945);
+  width: 180px;
+  height: 30px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  padding-top: 6px;
+  text-decoration: none;
+  text-align: center;
+  margin-left: 90px;
+  color: rgb(0, 0, 0);
+
+}
+
+
+
+
+
 
 .heart-button3 {
 display: inline-block;
@@ -82,6 +135,8 @@ border: none;
 box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
 -webkit-tap-highlight-color: transparent;
 transition: .3s ease-out;
+margin-left: 35px;
+margin-top: 20px;
 }
 .heart-button3:hover{
  cursor: pointer;

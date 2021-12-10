@@ -23,8 +23,10 @@
 
 <%= stylesheet_link_tag 'users.show', :media => "all" %>
 
-<h1>MY PAGE</h1>
 
+<div class="my-logo-box">
+<p class="my-logo">MY PAGE</p>
+</div>
 <div class="fandom">
 
 <div class="fan">
@@ -47,8 +49,16 @@
 		</div>
 
 		<div class="heart">			
-			<h1 class="animate__animated animate__heartBeat animate__repeat-2"><i class="fas fa-heart"></i></h1>
+			<h1 class="animate__animated animate__heartBeat animate__repeat-2"><i class="fas fa-heart fa-2x"></i></h1>
 		</div>
+
+		<div class="oshibibi">
+		<% if @user.oshibi != nil then %>
+		<%= @user.oshibi %>
+		<% end %>
+		</div>
+	
+
 	</div>
 
 	<div class="angel">
@@ -68,37 +78,82 @@
 
 </div>
 
-<h1>Profile</h1>
-	 <div class="profile"> 
-	 <% if @user.profile != nil then %>
- 			<%= @user.profile %>
-	 <% end %>
- 	 </div>
+<div class="profiles-box">
+			<div class="profiles">
 
-<h1>推し</h1>
-    <div class="oshiprofile">
-		<% if @user.oshiprofile != nil then %>
-		 <%= @user.oshiprofile %>
-		 <% end %>
-		</div>
-<p>推し日 : <% if @user.oshibi != nil then %><%= @user.oshibi %>	 <% end %></p>
-<p>推し期間 : <% if @user.oshibi != nil then %><%= @date.to_i %> <% end %></p>
+					<div class="mypro">
+					<h2 class="mypro2">MY PROFILE</h2>
+						<div class="profile"> 
+						<% if @user.profile != nil then %>
+								<%= @user.profile %>
+						<% end %>
+						</div>
+					</div>
 
 
-<% if current_user.id == @user.id %>
-	<%= link_to "編集する", edit_user_registration_path %>
-<% end %>
+					<div class="oshipro">
+						<h2 class="oshipro2">推しPLOFILE</h2>
+						<div class="oshiprofile"> 
+					<% if @user.oshiprofile != nil then %>
+					<%= @user.oshiprofile %>
+					<% end %>
+					</div>
+			</div>
+			</div>
+
+				<div class="btn4-box">
+				<% if current_user.id == @user.id %>
+					<%= link_to "", edit_user_registration_path %>
+				<% end %>
+					<div  class= "btn4"><i class="fas fa-pen fa-lg"></i></div>		
+				</div>
+
+</div>
 
 
 
 
-<h2>ユーザーの投稿一覧</h2>
-<% @user.bubbles.each do |b| %>
-	<%= b.user.name %>
-	<%= b.content %>
+<div class="my-b">
+<h2>MY BUBBLES</h2>
+</div>
 
-<% end %>
+<div class="bubbles-container">
 
-<%= link_to "マイページ", edit_user_path(current_user.id) %>
+		<% @user.bubbles.each do |b| %>
 
-<%= link_to "Tweet一覧に戻る", bubbles_path %>
+					<div class="bubble">
+						<div class="who">
+							
+								<% if b.user.image %>
+									<%= image_tag b.user.image_url, class: "user_pic" %>
+								<% else %>
+									<%= image_tag "fu.jpg" %>
+								<% end %>
+							
+						<div class="icon">
+							<p>	<%= b.user.name %></p>
+							</div>
+						</div>
+						
+						<%= image_tag b.image_url, size: "224x200", class: "imagepic" if b.image? %>
+						<%= b.title %>
+				
+					
+					
+						<ul>
+								<li class="btn"><%= link_to " 詳細", bubble_path(b.id) %></li>
+								<li class="btn"><i class="fas fa-folder-plus"></i><%= link_to "  フォルダ", controller: "posts", action:"new", id: b.id %></li>
+
+								<% if user_signed_in? && current_user.id == b.user_id %> 
+
+								<li class="btn"><i class="fas fa-pen"></i><%= link_to "  編集", edit_bubble_path(b.id) %></li>
+								<li class="btn"><i class="fas fa-trash-alt"></i><%= link_to "  削除", bubble_path(b.id), method: :delete %></li>
+							
+								<% end %>					
+						</ul>
+					</div>
+			<% end %>
+	</div>
+
+
+

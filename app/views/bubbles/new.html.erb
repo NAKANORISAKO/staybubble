@@ -24,6 +24,8 @@
 
 
 <div class="newbubble">
+			<div class="bntop">STAYBUBBLE</div>
+
 		<%= form_for @bubble do |f| %>
 			
 			<div class="field">
@@ -37,20 +39,19 @@
 			</div>
 
 		<div class="field">
-			<%= f.text_field :link,  placeholder: "リンク", :size => 50 %>
+			<%= f.text_field :link, class: "link", placeholder: "リンク", :size => 50 %>
 			<%= f.label :link, "リンク" %>	
 		</div>
 
 		<div class="field">
-			<%= f.file_field :image ,  placeholder: "画像" %>
-			<%= f.label :image, "画像" %>			
+		<%= f.file_field :image , class: "gazou",  placeholder: "画像"%>
+		<%= f.label :image,"画像", class: "gazou-label" %>	
 		</div>
 
 		<div class="field">
-			<%= f.text_area :content, :size => "50×10" %>
+			<%= f.text_area :content, class: "content", :size => "50×10" %>
 			<%= f.label :content %>
 		</div>
-
 
 		<div class="send">
 			<%= f.submit "Bubble", class: "heart-button3" %>

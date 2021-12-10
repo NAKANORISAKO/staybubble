@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :folders
   validates :name, presence: true
   validates :profile, length: { maximum: 200 }
+  validates :oshiprofile, length: { maximum: 200 }
   mount_uploader :image, ImageUploader
   mount_uploader :oshiga, ImageUploader
 end

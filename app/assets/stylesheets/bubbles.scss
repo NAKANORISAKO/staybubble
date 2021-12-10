@@ -1,11 +1,32 @@
-// Place all the styles related to the bubbles controller here.
+/* // Place all the styles related to the bubbles controller here.
 // They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+// You can use Sass (SCSS) here: https://sass-lang.com/ */
 
 
+.bubbles-bg {
+	background: linear-gradient(252deg,  #ff89acdc,#ffffff, #efdbf7, #b8b0ff, #f0c7ffd7 );
+	background-size: 1000% 1000%;
 
+	-webkit-animation: bubble-back 20s ease infinite;
+	-moz-animation: bubble-back 20s ease infinite;
+	animation: bubble-back 20s ease infinite;
+}
 
-
+@-webkit-keyframes bubble-back {
+	0%{background-position:0% 20%}
+	50%{background-position:100% 81%}
+	100%{background-position:0% 20%}
+}
+@-moz-keyframes bubble-back {
+	0%{background-position:0% 20%}
+	50%{background-position:100% 81%}
+	100%{background-position:0% 20%}
+}
+@keyframes bubble-back {
+	0%{background-position:0% 20%}
+	50%{background-position:100% 81%}
+	100%{background-position:0% 20%}
+}
 
 
 
@@ -14,17 +35,85 @@
 @media (max-width: 1800px) {
 
 	
+	.search-box {
+		position: relative;
+	}
 
-//  .bubbles-container {
-//  width: 90%;
-// 	 margin-left: auto;
-// 	 margin-right: auto;
+.search {
+	border: .5px solid rgba(135, 134, 136, 0.747);
+	background-color: rgba(255, 255, 255, 0.349);
+	border-top-left-radius: 50px;
+	border-bottom-left-radius: 50px;
+	width: 347px;
+	height: 50px;
+	position: relative;
+}
 
-// 	display: flex;
-// 	flex-direction: row;
-// 	flex-wrap: wrap;
-// 	align-content: flex-start;
-// }
+.btn5-box {
+	display: inline-block;
+	position: absolute;
+  background-color:rgba(255, 255, 255, 0.349);
+  width: 45px;
+	height: 41px;
+  padding-top: 12px;
+	padding-left: 2.5px;
+	padding-right: 2.5px;
+	padding-bottom: 0px;
+  text-decoration: none;
+  border-top-right-radius: 50%;
+ border-bottom-right-radius:  50%;
+ border-top-left-radius: 0px;
+ border-bottom-left-radius: 0px;
+	border: none;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  -webkit-tap-highlight-color: transparent;
+  transition: .3s ease-out;
+  text-align: center;
+	left: 350px;
+	top: 1;
+	
+}
+
+.search-container input[type="submit"] {
+background-size: contain;
+background-repeat: no-repeat;
+background-color: rgba(255, 255, 255, 0.349);
+padding: 0;
+text-decoration: none;
+border: none;
+border-top-right-radius: 50%;
+border-bottom-right-radius:  50%;
+border-top-left-radius: 0px;
+border-bottom-left-radius: 0px;
+position: absolute;
+top: 0;
+left: 0;
+height:100%;
+width: 100%;
+}
+
+
+.btn5-box input[type="submit"]:hover {
+	cursor: pointer;
+	text-decoration: none;
+	 box-shadow: 0 5px 10px 0 rgba(0,0,0,0.12), 0 3px 20px 0 rgba(0,0,0,0.12), 0 5px 6px -2px rgba(0,0,0,0.2);
+	 border-top-right-radius: 50px;
+	 border-bottom-right-radius:  50px;
+	 border-top-left-radius: 0px;
+border-bottom-left-radius: 0px;
+}
+
+ .bubbles-container {
+
+ width: 90%;
+	 margin-left: auto;
+	 margin-right: auto;
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
 
 .bubbles-container {
 	margin-left: auto;
@@ -37,6 +126,7 @@
 }
 
 .bubbles-container .bubble {
+	background-color: white;
 	width: 250px;
 	width: 250px;
 	height: 320px;
@@ -48,15 +138,16 @@
 	padding-bottom: 20px;
 	padding-left: 10px;
 	padding-right: 10px;
-	border: 3px solid;
-	border-color: rgba(125, 93, 138, 0.5);
-	border-radius: 20px;
+	border: 0.5px solid;
+	border-color: rgba(0, 0, 0, 0.253);
+	box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.384);
+	border-radius: 5px;
 	position: relative;
 	overflow: hidden;
  -moz-box-sizing: border-box;
  -webkit-box-sizing: border-box;
  -moz-box-sizing: border-box;
- -ms-box-sizing: border-box;
+ box-sizing: border-box;
 }
 
 
@@ -148,12 +239,14 @@ a {
 	text-decoration: none;
 }
 
-
-
 }
 
 /*スマホ表示時*/
 @media (max-width: 580px) {
+
+
+
+
 
 
 	

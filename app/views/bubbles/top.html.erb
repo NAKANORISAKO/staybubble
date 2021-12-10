@@ -1,3 +1,57 @@
+<%= stylesheet_link_tag 'top', :media => "all" %>
+
+
+<div class="top-bg">
+
+<section class="hero">
+  <div class="video-box">
+	<%= video_tag "/assets/videos/Stars.mp4", playsinline: true, autoplay: true, loop: true, muted: true, width: "320", height: "240", class: "video" %>
+  </div>
+</div>
+  <div class="text-box">
+    <p class="top-ms">明日より遠く、永遠より長く</p>
+	</div>
+
+	<div class="text-box2">
+   
+	<p class="top-ms2">우리는 너를 향해 빛나는 별 <br>
+	　너라는 햇살이 비춰주는 별
+	</p>
+	</div>
+	</div>
+
+</section>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<section class="hero2">
+<div class="video-box2">
+<%= video_tag "/assets/videos/Stars2.mp4", playsinline: true, autoplay: true, loop: true, muted: true, width: "320", height: "240", class: "video2" %>
+</div>
+<div class="text-box3">
+	<h1>明日より遠く、永遠より長く</h1>
+</div>
+</section>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+
+<div class="bg">
+
 <% if user_signed_in? %>
 	<li><%= button_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
 <% else %>
@@ -6,3 +60,6 @@
 	<% end %>
 
 	<%= link_to "Bubble一覧に戻る", bubbles_path, data: {"turbolinks" => false} %>
+  </div>
+
+	</div>
