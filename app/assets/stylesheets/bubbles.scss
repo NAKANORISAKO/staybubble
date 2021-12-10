@@ -6,7 +6,7 @@
 .bubbles-bg {
 	background: linear-gradient(252deg,  #ff89acdc,#ffffff, #efdbf7, #b8b0ff, #f0c7ffd7 );
 	background-size: 1000% 1000%;
-
+	min-height: 850px;
 	-webkit-animation: bubble-back 20s ease infinite;
 	-moz-animation: bubble-back 20s ease infinite;
 	animation: bubble-back 20s ease infinite;

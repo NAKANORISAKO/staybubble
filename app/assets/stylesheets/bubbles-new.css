@@ -1,5 +1,7 @@
 
-
+.newbubble-bg {
+  min-height: 850px;
+}
 
 .newbubble {
   margin-left: auto;
