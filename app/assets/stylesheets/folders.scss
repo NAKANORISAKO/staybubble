@@ -3,15 +3,77 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .folder-bg {
-	min-height: 850px;
+	background: linear-gradient(252deg,  #ff89acdc,#ffffff, #efdbf7, #b8b0ff, #f0c7ffd7 );
+	background-size: 1000% 1000%;
+	min-height: 800px;
+	-webkit-animation: bubble-back 20s ease infinite;
+	-moz-animation: bubble-back 20s ease infinite;
+	animation: bubble-back 20s ease infinite;
+}
+
+@-webkit-keyframes bubble-back {
+	0%{background-position:0% 20%}
+	50%{background-position:100% 81%}
+	100%{background-position:0% 20%}
+}
+@-moz-keyframes bubble-back {
+	0%{background-position:0% 20%}
+	50%{background-position:100% 81%}
+	100%{background-position:0% 20%}
+}
+@keyframes bubble-back {
+	0%{background-position:0% 20%}
+	50%{background-position:100% 81%}
+	100%{background-position:0% 20%}
 }
 
 .post-bg {
-	min-height: 850px;
+	background: linear-gradient(252deg,  #ff89acdc,#ffffff, #efdbf7, #b8b0ff, #f0c7ffd7 );
+	background-size: 1000% 1000%;
+	min-height: 800px;
+	-webkit-animation: bubble-back 20s ease infinite;
+	-moz-animation: bubble-back 20s ease infinite;
+	animation: bubble-back 20s ease infinite;
 }
 
+@-webkit-keyframes bubble-back {
+	0%{background-position:0% 20%}
+	50%{background-position:100% 81%}
+	100%{background-position:0% 20%}
+}
+@-moz-keyframes bubble-back {
+	0%{background-position:0% 20%}
+	50%{background-position:100% 81%}
+	100%{background-position:0% 20%}
+}
+@keyframes bubble-back {
+	0%{background-position:0% 20%}
+	50%{background-position:100% 81%}
+	100%{background-position:0% 20%}
+}
 .folderindex-bg {
-	min-height: 850px;
+	background: linear-gradient(252deg,  #ff89acdc,#ffffff, #efdbf7, #b8b0ff, #f0c7ffd7 );
+	background-size: 1000% 1000%;
+	min-height: 800px;
+	-webkit-animation: bubble-back 20s ease infinite;
+	-moz-animation: bubble-back 20s ease infinite;
+	animation: bubble-back 20s ease infinite;
+}
+
+@-webkit-keyframes bubble-back {
+	0%{background-position:0% 20%}
+	50%{background-position:100% 81%}
+	100%{background-position:0% 20%}
+}
+@-moz-keyframes bubble-back {
+	0%{background-position:0% 20%}
+	50%{background-position:100% 81%}
+	100%{background-position:0% 20%}
+}
+@keyframes bubble-back {
+	0%{background-position:0% 20%}
+	50%{background-position:100% 81%}
+	100%{background-position:0% 20%}
 }
 
 .folder-container {
