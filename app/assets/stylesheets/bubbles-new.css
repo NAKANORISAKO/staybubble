@@ -1,36 +1,11 @@
 
-.newbubble-bg {
-	background: linear-gradient(252deg,  #ff89acdc,#ffffff, #efdbf7, #b8b0ff, #f0c7ffd7 );
-	background-size: 1000% 1000%;
-	min-height: 800px;
-	-webkit-animation: bubble-back 20s ease infinite;
-	-moz-animation: bubble-back 20s ease infinite;
-	animation: bubble-back 20s ease infinite;
-}
-
-@-webkit-keyframes bubble-back {
-	0%{background-position:0% 20%}
-	50%{background-position:100% 81%}
-	100%{background-position:0% 20%}
-}
-@-moz-keyframes bubble-back {
-	0%{background-position:0% 20%}
-	50%{background-position:100% 81%}
-	100%{background-position:0% 20%}
-}
-@keyframes bubble-back {
-	0%{background-position:0% 20%}
-	50%{background-position:100% 81%}
-	100%{background-position:0% 20%}
-}
-
 
 .newbubble {
   margin-left: auto;
   margin-right: auto;
-  
+  margin-top: 130px;
   /* // position: absolute; */
-  padding-top: 150px;
+  padding-top: 0px;
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 100px;
@@ -40,7 +15,7 @@
   right: 0;
   background: #F9F9F9;
   width: 370px;
-  height:420px;
+  height:430px;
   border-radius: 3px;
   box-shadow: 0 3px 36px 0 rgba(0, 0, 0, 0.6);
   overflow: hidden;
@@ -97,6 +72,7 @@ label {
   
 }
 
+
 .field label {
   position: absolute;
   top: calc(50% - 7px);
@@ -118,10 +94,12 @@ label {
   resize: none;
   width: 370px;
   height: 80px;
-  margin-top: 60px;
+  margin-top: 0px;
+  border: 1px solid rgba(151, 95, 173, 0.877);
+  font-family: 'Murecho', sans-serif;;
 }
 
-.gazou {
+ .gazou {
   display: none;
   margin-top: 15px;
   margin-left: 20px;
@@ -141,17 +119,22 @@ label {
   margin-left: 90px;
   color: rgb(0, 0, 0);
 
+} */
+
+
+.send {
+  padding-left: 100px;
+  margin-bottom: 40px;
 }
-
-
-
 
 
 
 .heart-button3 {
 display: inline-block;
 background-color: rgba(215, 175, 231, 0.945);
-width: 160px;
+color: rgba(56, 56, 56, 0.85);
+width: 250px;
+height: 50px;
 padding: 0.8em;
 text-decoration: none;
 border-radius: 50px;
@@ -159,12 +142,21 @@ border: none;
 box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
 -webkit-tap-highlight-color: transparent;
 transition: .3s ease-out;
-margin-left: 35px;
-margin-top: 20px;
+margin-left: 55px;
+margin-top: 15px;
+margin-bottom: 40px;
 }
 .heart-button3:hover{
  cursor: pointer;
  text-decoration: none;
   box-shadow: 0 5px 10px 0 rgba(0,0,0,0.12), 0 3px 20px 0 rgba(0,0,0,0.12), 0 5px 6px -2px rgba(0,0,0,0.2);
+}
+
+.gazou_field{
+  height: 60px;
+}
+
+.bottom-up{
+  height: 20px;
 }
 

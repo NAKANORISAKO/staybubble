@@ -1,26 +1,31 @@
-<div class="folderindex-bg">
+
 
 <header class="site-header flex flex--bet">
    
-    <nav class="gnav">
-        <div class="gnav__menu flex flex--bet">
-            <div class="gnav__menu__item">
-            <%= link_to "新規投稿へ", new_bubble_path, class: "gnav__menu__item__link"  %>
-            </div>
-            <div class="gnav__menu__item">
-            <%= link_to "マイページ", user_path(current_user.id), class: "gnav__menu__item__link"  %>
-            </div>
-            <div class="gnav__menu__item">
-            <%= link_to "フォルダ一覧", folders_path, class: "gnav__menu__item__link" %>
-            </div>
-            <div class="gnav__menu__item">
-            <%= link_to "イベント", events_path, class: "gnav__menu__item__link" %>
-            </div>
-            <div class="gnav__menu__item">
-            <%= link_to "Bubble一覧に戻る", bubbles_path, class: "gnav__menu__item__link" %>
-            </div>
-        </div>
-    </nav>
+<nav class="gnav">
+		<div class="gnav__menu flex flex--bet">
+			<div class="left-box">
+				<%= link_to "STAYbubbles", root_path, class: "gnav__menu__logo"  %>
+			</div>
+			<div class="right-box">
+					<div class="gnav__menu__item">
+					<%= link_to "新規投稿へ", new_bubble_path, class: "gnav__menu__item__link"  %>
+					</div>
+					<div class="gnav__menu__item">
+					<%= link_to "マイページ", user_path(current_user.id), class: "gnav__menu__item__link"  %>
+					</div>
+					<div class="gnav__menu__item">
+					<%= link_to "フォルダ一覧", folders_path, class: "gnav__menu__item__link" %>
+					</div>
+					<div class="gnav__menu__item">
+					<%= link_to "イベント", events_path, class: "gnav__menu__item__link" %>
+					</div>
+					<div class="gnav__menu__item">
+					<%= link_to "Bubble一覧に戻る", bubbles_path, class: "gnav__menu__item__link" %>
+					</div>
+			</div>
+		</div>
+</nav>
 </header>
 
 
@@ -31,9 +36,6 @@
 
 			<div class="folder-container">
 				<% @folders.each do |f| %>
-
-			
-
 					<div class="folder-box">
 						<%= link_to folder_path(f.id) do %>
 							<div class="folder">
@@ -65,5 +67,5 @@
 		
 
 		</div>
-	</div>
+
 

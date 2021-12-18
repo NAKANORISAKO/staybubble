@@ -1,28 +1,31 @@
-<div class="show-bg">
 
 <header class="site-header flex flex--bet">
    
-    <nav class="gnav">
-        <div class="gnav__menu flex flex--bet">
-            <div class="gnav__menu__item">
-            <%= link_to "新規投稿へ", new_bubble_path, class: "gnav__menu__item__link"  %>
-            </div>
-            <div class="gnav__menu__item">
-            <%= link_to "マイページ", user_path(current_user.id), class: "gnav__menu__item__link"  %>
-            </div>
-            <div class="gnav__menu__item">
-            <%= link_to "フォルダ一覧", folders_path, class: "gnav__menu__item__link" %>
-            </div>
-            <div class="gnav__menu__item">
-            <%= link_to "イベント", events_path, class: "gnav__menu__item__link" %>
-            </div>
-            <div class="gnav__menu__item">
-            <%= link_to "Bubble一覧に戻る", bubbles_path, class: "gnav__menu__item__link" %>
-            </div>
-        </div>
-    </nav>
+<nav class="gnav">
+		<div class="gnav__menu flex flex--bet">
+			<div class="left-box">
+				<%= link_to "STAYbubbles", root_path, class: "gnav__menu__logo"  %>
+			</div>
+			<div class="right-box">
+					<div class="gnav__menu__item">
+					<%= link_to "新規投稿へ", new_bubble_path, class: "gnav__menu__item__link"  %>
+					</div>
+					<div class="gnav__menu__item">
+					<%= link_to "マイページ", user_path(current_user.id), class: "gnav__menu__item__link"  %>
+					</div>
+					<div class="gnav__menu__item">
+					<%= link_to "フォルダ一覧", folders_path, class: "gnav__menu__item__link" %>
+					</div>
+					<div class="gnav__menu__item">
+					<%= link_to "イベント", events_path, class: "gnav__menu__item__link" %>
+					</div>
+					<div class="gnav__menu__item">
+					<%= link_to "Bubble一覧に戻る", bubbles_path, class: "gnav__menu__item__link" %>
+					</div>
+			</div>
+		</div>
+</nav>
 </header>
-
 <%= stylesheet_link_tag 'users.show', :media => "all" %>
 
 
@@ -116,7 +119,7 @@
 
 
 <div class="my-b">
-<h2>MY BUBBLES</h2>
+<p class="my-bs">MY BUBBLES</p>
 </div>
 
 <div class="bubbles-container">
@@ -137,19 +140,19 @@
 							</div>
 						</div>
 						
-						<%= image_tag b.image_url, size: "224x200", class: "imagepic" if b.image? %>
-						<%= b.title %>
+						<%= image_tag b.image_url, size: "228x200", class: "imagepic" if b.image? %>
+						<div class="indextitle"><%= strip_tags(b.title).truncate(15) %></div>
 				
 					
 					
 						<ul>
-								<li class="btn"><%= link_to " 詳細", bubble_path(b.id) %></li>
+								<li class="btn"><i class="far fa-file-alt"></i>　 <%= link_to "詳細 ", bubble_path(b.id) %></li>
 								<li class="btn"><i class="fas fa-folder-plus"></i><%= link_to "  フォルダ", controller: "posts", action:"new", id: b.id %></li>
 
 								<% if user_signed_in? && current_user.id == b.user_id %> 
 
-								<li class="btn"><i class="fas fa-pen"></i><%= link_to "  編集", edit_bubble_path(b.id) %></li>
-								<li class="btn"><i class="fas fa-trash-alt"></i><%= link_to "  削除", bubble_path(b.id), method: :delete %></li>
+								<li class="btn"><i class="fas fa-pen"></i>　<%= link_to "  編集 ", edit_bubble_path(b.id) %></li>
+								<li class="btn"><i class="fas fa-trash-alt"></i>　<%= link_to "   削除 ", bubble_path(b.id), method: :delete %></li>
 							
 								<% end %>					
 						</ul>
@@ -157,7 +160,10 @@
 			<% end %>
 	</div>
 
-	</div>
+	<div class="log-out">
+		<% if user_signed_in? %>
+			<%= link_to 'ログアウト', destroy_user_session_path, class: 'lg-btn', method: :delete %>
+		<% end %>
+		</div>
 
-
-
+	

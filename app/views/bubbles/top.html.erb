@@ -1,70 +1,41 @@
 <%= stylesheet_link_tag 'top', :media => "all" %>
 
 
-<div class="top-bg">
+
 
 <section class="hero">
   <div class="video-box">
-	<%= video_tag "/assets/videos/Stars.mp4", playsinline: true, autoplay: true, loop: true, muted: true, width: "320", height: "240", class: "video" %>
-  </div>
+		<div class="btn6-box">
+			<%= link_to "", new_user_session_path, class: 'btn6-3' %><div class="gogo">GO! <br>bubble</div>
+		</div>
+			<%= video_tag "/assets/videos/Stars.mp4", playsinline: true, autoplay: true, loop: true, muted: true, width: "320", height: "240", class: "video" %>
+ </div>
 
-  # <div class="video-bg">
-  #   <iframe src="https://www.youtube.com/embed/57n4dZAPxNY?autoplay=1&mute=1&playsinline=1&loop=1&playlist=57n4dZAPxNY&controls=0&disablekb=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  # </div>
+		<div class="text-box">
+			<p class="top-ms">STAY<br>
+			　　　　bubbles</p>
+		</div>
 
-</div>
-  <div class="text-box">
-    <p class="top-ms">明日より遠く、永遠より長く</p>
-	</div>
+		<div class="text-box2">
+			<div class="top-ms2">
+				<span>
+					우리는 너를 향해 빛나는 별 <br>
+					　너라는 햇살이 비춰주는 별
+				</span>
+			</div>
+		</div>
 
-	<div class="text-box2">
-   
-	<p class="top-ms2">우리는 너를 향해 빛나는 별 <br>
-	　너라는 햇살이 비춰주는 별
-	</p>
-	</div>
-	</div>
+		<script>
+			const CLASSNAME = "-visible";
+			const TIMEOUT = 480;
+			const DELAY = 100;
+			const $target1 = $(".text-box2");
 
+			setInterval(() => {
+				$target1.addClass(CLASSNAME);
+				setTimeout(() => {
+					$target2.addClass(CLASSNAME);
+				}, DELAY);
+			}, TIMEOUT * 2);
+		</script>
 </section>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<br>
-<br>
-<section class="hero2">
-<div class="video-box2">
-<%= video_tag "/assets/videos/Stars2.mp4", playsinline: true, autoplay: true, loop: true, muted: true, width: "320", height: "240", class: "video2" %>
-</div>
-<div class="text-box3">
-	<h1>明日より遠く、永遠より長く</h1>
-</div>
-</section>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<br>
-<br>
-
-<div class="bg">
-
-<% if user_signed_in? %>
-	<li><%= button_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-<% else %>
-	<li><%= link_to "新規登録", new_user_registration_path %></li>
-	<li><%= link_to "ログイン", new_user_session_path %></li>
-	<% end %>
-
-	<%= link_to "Bubble一覧に戻る", bubbles_path, data: {"turbolinks" => false} %>
-  </div>
-
-	</div>

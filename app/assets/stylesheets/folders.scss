@@ -2,91 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.folder-bg {
-	background: linear-gradient(252deg,  #ff89acdc,#ffffff, #efdbf7, #b8b0ff, #f0c7ffd7 );
-	background-size: 1000% 1000%;
-	min-height: 800px;
-	-webkit-animation: bubble-back 20s ease infinite;
-	-moz-animation: bubble-back 20s ease infinite;
-	animation: bubble-back 20s ease infinite;
-}
-
-@-webkit-keyframes bubble-back {
-	0%{background-position:0% 20%}
-	50%{background-position:100% 81%}
-	100%{background-position:0% 20%}
-}
-@-moz-keyframes bubble-back {
-	0%{background-position:0% 20%}
-	50%{background-position:100% 81%}
-	100%{background-position:0% 20%}
-}
-@keyframes bubble-back {
-	0%{background-position:0% 20%}
-	50%{background-position:100% 81%}
-	100%{background-position:0% 20%}
-}
-
-.post-bg {
-	background: linear-gradient(252deg,  #ff89acdc,#ffffff, #efdbf7, #b8b0ff, #f0c7ffd7 );
-	background-size: 1000% 1000%;
-	min-height: 800px;
-	-webkit-animation: bubble-back 20s ease infinite;
-	-moz-animation: bubble-back 20s ease infinite;
-	animation: bubble-back 20s ease infinite;
-}
-
-@-webkit-keyframes bubble-back {
-	0%{background-position:0% 20%}
-	50%{background-position:100% 81%}
-	100%{background-position:0% 20%}
-}
-@-moz-keyframes bubble-back {
-	0%{background-position:0% 20%}
-	50%{background-position:100% 81%}
-	100%{background-position:0% 20%}
-}
-@keyframes bubble-back {
-	0%{background-position:0% 20%}
-	50%{background-position:100% 81%}
-	100%{background-position:0% 20%}
-}
-.folderindex-bg {
-	background: linear-gradient(252deg,  #ff89acdc,#ffffff, #efdbf7, #b8b0ff, #f0c7ffd7 );
-	background-size: 1000% 1000%;
-	min-height: 800px;
-	-webkit-animation: bubble-back 20s ease infinite;
-	-moz-animation: bubble-back 20s ease infinite;
-	animation: bubble-back 20s ease infinite;
-}
-
-@-webkit-keyframes bubble-back {
-	0%{background-position:0% 20%}
-	50%{background-position:100% 81%}
-	100%{background-position:0% 20%}
-}
-@-moz-keyframes bubble-back {
-	0%{background-position:0% 20%}
-	50%{background-position:100% 81%}
-	100%{background-position:0% 20%}
-}
-@keyframes bubble-back {
-	0%{background-position:0% 20%}
-	50%{background-position:100% 81%}
-	100%{background-position:0% 20%}
-}
 
 .folder-container {
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 80px;
-	width: 90%;
+	margin-top: 120px;
+	width: 80%;
 	flex-wrap: wrap;
 	display: flex;
-	
+padding-left: 20px;
 	align-items: top;
 
 }
+
+
+
+
+
 
 .foldername {
 	width: 200px;
@@ -99,10 +31,10 @@
 	background-image: image-url("folder.png");
 	background-size: contain;
 	background-repeat: no-repeat;
-	margin-top:10px;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-bottom: 2px;
+	margin-top: 22px;
+	margin-left: 22px;
+	margin-right: 20px;
+	margin-bottom: 3px;
 	padding-top: 50px;
 	display: flex;
 	justify-content: center;

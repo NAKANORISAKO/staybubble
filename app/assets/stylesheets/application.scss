@@ -24,10 +24,32 @@
 }
 
 body {
-	padding: 0;
-	margin: 0;
+
+	margin-top: 0px;
+	margin-left: 0px;
+	background: linear-gradient(252deg,  #ff89acdc,#a797f0, #ffbce5, #b8b0ff, #e7bdf7d7 );
+	background-size: 1000% 1000%;
+	min-height: 800px;
+	-webkit-animation: bubble-back 15s ease infinite;
+	-moz-animation: bubble-back 15s ease infinite;
+	animation: bubble-back 15s ease infinite;
 }
 
+@-webkit-keyframes bubble-back {
+	0%{background-position:0% 20%}
+	50%{background-position:100% 81%}
+	100%{background-position:0% 20%}
+}
+@-moz-keyframes bubble-back {
+	0%{background-position:0% 20%}
+	50%{background-position:100% 81%}
+	100%{background-position:0% 20%}
+}
+@keyframes bubble-back {
+	0%{background-position:0% 20%}
+	50%{background-position:100% 81%}
+	100%{background-position:0% 20%}
+}
 
  .site-header{
 	background-color: rgb(255, 255, 255);
@@ -35,7 +57,7 @@ body {
 	text-decoration: none;
 	width: 100%;
 	color:  rgb(255, 255, 255);
-	padding: 20px;
+	padding: 0px;
 	position: fixed;
 	top: 0;
 	transition: .5s;
@@ -51,13 +73,20 @@ body {
 .gnav__menu {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
 	border: 2px;
+	margin: 0;
 }
 
+.gnav__menu flex flex--bet {
+	margin-left: 0px;
+}
+	
 .gnav__menu__item__link {
 	font-family: 'Murecho', sans-serif;
 	text-decoration: none;
+	padding-top: 15px;
+	padding-bottom: 15px;
 	color:  rgb(0, 0, 0);
 }
 
@@ -65,4 +94,39 @@ body {
 	font-family: 'Murecho', sans-serif;
 	text-decoration: none;
 	color:  rgb(0, 0, 0);
+}
+
+.gnav__menu__logo {
+	font-family: 'Shrikhand', cursive;
+	text-decoration: none;
+	color:  rgb(0, 0, 0);
+	font-size: 37px;
+}
+
+.gnav__menu__logo:hover {
+	font-family: 'Shrikhand', cursive;
+	text-decoration: none;
+	color:  rgb(0, 0, 0);
+}
+
+.right-box {
+ display: flex;
+font-size: 18px;
+width: 750px;
+padding-top: 20px;
+padding-right: 40px;
+height: 50px;
+justify-content: space-around;
+}
+
+.left-box {
+	padding-top: 10px;
+	margin-left: 30px;
+	
+		display: inline-block;
+		background: linear-gradient(90deg,  #b8b0ff, #ad58fdc1, #c584f0 30%, #ff41a6aa, #b8b0ff);
+		background: -webkit-linear-gradient(0deg, #b8b0ff, #ad58fdc1, #c584f0 30%, #ff41a6aa);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+
 }

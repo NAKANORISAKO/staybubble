@@ -1,54 +1,60 @@
+
 <header class="site-header flex flex--bet">
    
-    <nav class="gnav">
-        <div class="gnav__menu flex flex--bet">
-            <div class="gnav__menu__item">
-            <%= link_to "新規投稿へ", new_bubble_path, class: "gnav__menu__item__link"  %>
-            </div>
-            <div class="gnav__menu__item">
-            <%= link_to "マイページ", user_path(current_user.id), class: "gnav__menu__item__link"  %>
-            </div>
-            <div class="gnav__menu__item">
-            <%= link_to "フォルダ一覧", folders_path, class: "gnav__menu__item__link" %>
-            </div>
-            <div class="gnav__menu__item">
-            <%= link_to "イベント", events_path, class: "gnav__menu__item__link" %>
-            </div>
-            <div class="gnav__menu__item">
-            <%= link_to "Bubble一覧に戻る", bubbles_path, class: "gnav__menu__item__link" %>
-            </div>
-        </div>
-    </nav>
+<nav class="gnav">
+		<div class="gnav__menu flex flex--bet">
+			<div class="left-box">
+				<%= link_to "STAYbubbles", root_path, class: "gnav__menu__logo"  %>
+			</div>
+			<div class="right-box">
+					<div class="gnav__menu__item">
+					<%= link_to "新規投稿へ", new_bubble_path, class: "gnav__menu__item__link"  %>
+					</div>
+					<div class="gnav__menu__item">
+					<%= link_to "マイページ", user_path(current_user.id), class: "gnav__menu__item__link"  %>
+					</div>
+					<div class="gnav__menu__item">
+					<%= link_to "フォルダ一覧", folders_path, class: "gnav__menu__item__link" %>
+					</div>
+					<div class="gnav__menu__item">
+					<%= link_to "イベント", events_path, class: "gnav__menu__item__link" %>
+					</div>
+					<div class="gnav__menu__item">
+					<%= link_to "Bubble一覧に戻る", bubbles_path, class: "gnav__menu__item__link" %>
+					</div>
+			</div>
+		</div>
+</nav>
 </header>
+<div class="addf-box">
+	<div class="fbubble">
+		<div class="showwho1">
+			<% if  @bubble.user.image %>
+			<div class="in-showwho1">
+			<%= image_tag  @bubble.user.image_url, class: "user_pic" %>
+			<% else %>
+			<%= image_tag "fu.jpg" %>
+			<% end %>
+			</div>
+			<div class="showicon">
+			<%=  @bubble.user.name %>
+			</div>
+		</div>
 
-<h1>STAYBubbles</h1>
-<h3>Bubble詳細</h3>
-<div class="bubble">
-<p><%= @bubble.user.email %></p>
-<p><%= @bubble.created_at %></p>
-<p><%= @bubble.title %></p>
-<p><%= @bubble.label %></p>
-<p><%= @bubble.link %></p>
-<p><%= @bubble.date %></p>
-<p><%= @bubble.content %></p>
-<%= image_tag @bubble.image_url, size: "250x200" if @bubble.image? %>
+			<div class="addfolder">
+				<p class="showtitle"><%= @bubble.title %></p>
+				<p><i class="fas fa-play-circle"></i>　<%= @bubble.label %></p>
+				<p><%= strip_tags(@bubble.content).truncate(40) %></p>
+				<%= image_tag @bubble.image_url, size: "300x200",class: "fimagepic" if @bubble.image? %>
+				<p><%= @bubble.date %></p>
+				<p><%= @bubble.created_at %></p>
+			</div>
+	</div>
+		<div class= "folders">
+			<%= form_with model: @post do |f| %>
+			<%= f.collection_select :folder_id, Folder.all, :id, :folder_name, include_blank: "フォルダ" %>
+			<%= f.hidden_field :bubble_id, value: @bubble.id %>
+			<%= f.submit '作成'%>
+			<% end %>
+ 		</div>
 </div>
-
-<div class= "folders">
-<%= form_with model: @post do |f| %>
-
-	<%= f.collection_select :folder_id, Folder.all, :id, :folder_name, include_blank: "選択して下さい" %>
-	<%= f.hidden_field :bubble_id, value: @bubble.id %>
-
-	<%= f.submit '送信'%>
-<% end %>
-
-
-
-
-
-
-
-<br>
-
-<%= link_to "Bubble一覧に戻る", bubbles_path %>

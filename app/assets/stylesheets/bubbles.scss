@@ -3,138 +3,97 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/ */
 
 
-.bubbles-bg {
-	background: linear-gradient(252deg,  #ff89acdc,#ffffff, #efdbf7, #b8b0ff, #f0c7ffd7 );
-	background-size: 1000% 1000%;
-	min-height: 850px;
-	-webkit-animation: bubble-back 20s ease infinite;
-	-moz-animation: bubble-back 20s ease infinite;
-	animation: bubble-back 20s ease infinite;
-}
-
-@-webkit-keyframes bubble-back {
-	0%{background-position:0% 20%}
-	50%{background-position:100% 81%}
-	100%{background-position:0% 20%}
-}
-@-moz-keyframes bubble-back {
-	0%{background-position:0% 20%}
-	50%{background-position:100% 81%}
-	100%{background-position:0% 20%}
-}
-@keyframes bubble-back {
-	0%{background-position:0% 20%}
-	50%{background-position:100% 81%}
-	100%{background-position:0% 20%}
-}
-
 
 
 
 
 @media (max-width: 1800px) {
-
+.logo {
+	margin-top: 110px;
+}
 	
 	.search-box {
-		position: relative;
+		display: flex;
 	}
 
 .search {
-	border: .5px solid rgba(135, 134, 136, 0.747);
+	border: .5px solid rgba(166, 166, 167, 0.411);
 	background-color: rgba(255, 255, 255, 0.349);
 	border-top-left-radius: 50px;
 	border-bottom-left-radius: 50px;
 	width: 347px;
 	height: 50px;
-	position: relative;
+	margin-left: 85px;
+}
+.search:hover {
+	cursor: pointer;
+	text-decoration: none;
+	 box-shadow: 0 5px 10px 0 rgba(0,0,0,0.12), 0 3px 20px 0 rgba(0,0,0,0.12), 0 5px 6px -2px rgba(0,0,0,0.2);
+	 border-top-left-radius: 50px;
+	 border-bottom-left-radius: 50px;
+	 width: 347px;
+	 height: 50px;
+	 margin-left: 85px;
 }
 
-.btn5-box {
-	display: inline-block;
-	position: absolute;
-  background-color:rgba(255, 255, 255, 0.349);
-  width: 45px;
-	height: 41px;
-  padding-top: 12px;
-	padding-left: 2.5px;
-	padding-right: 2.5px;
-	padding-bottom: 0px;
-  text-decoration: none;
-  border-top-right-radius: 50%;
- border-bottom-right-radius:  50%;
- border-top-left-radius: 0px;
- border-bottom-left-radius: 0px;
-	border: none;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
-  -webkit-tap-highlight-color: transparent;
-  transition: .3s ease-out;
-  text-align: center;
-	left: 350px;
-	top: 1;
-	
-}
 
 .search-container input[type="submit"] {
 background-size: contain;
 background-repeat: no-repeat;
 background-color: rgba(255, 255, 255, 0.349);
-padding: 0;
+padding: 1px 2px;
 text-decoration: none;
 border: none;
 border-top-right-radius: 50%;
 border-bottom-right-radius:  50%;
 border-top-left-radius: 0px;
 border-bottom-left-radius: 0px;
-position: absolute;
-top: 0;
-left: 0;
-height:100%;
-width: 100%;
+height:53px;
+width: 53px;
 }
-
-
-.btn5-box input[type="submit"]:hover {
+.search-container input[type="submit"]:hover {
 	cursor: pointer;
 	text-decoration: none;
 	 box-shadow: 0 5px 10px 0 rgba(0,0,0,0.12), 0 3px 20px 0 rgba(0,0,0,0.12), 0 5px 6px -2px rgba(0,0,0,0.2);
-	 border-top-right-radius: 50px;
-	 border-bottom-right-radius:  50px;
+	 border-top-right-radius: 50%;
+	 border-bottom-right-radius:  50%;
 	 border-top-left-radius: 0px;
-border-bottom-left-radius: 0px;
+	 border-bottom-left-radius: 0px;
 }
+.btn5 {
+	position: relative;
+}
+
+.fasearch {
+	position: absolute;
+	top: 13px;
+	left: 14px;
+}
+
+
 
  .bubbles-container {
 
  width: 90%;
 	 margin-left: auto;
 	 margin-right: auto;
-
+margin-top: 30px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	align-content: flex-start;
-}
-
-.bubbles-container {
-	margin-left: auto;
-	margin-right: auto;
-	width: 90%;
-	flex-wrap: wrap;
-	display: flex;
-	justify-content: space-between;
-	align-items: top;
+align-items: top;
 }
 
 .bubbles-container .bubble {
 	background-color: white;
 	width: 250px;
-	width: 250px;
-	height: 320px;
+	height: 325px;
 	margin-right: 10px;
 	margin-left: 10px;
 	margin-bottom: 8px;
 	margin-top: 8px;
-	padding-top: 20px;
+	padding-top: 15px;
 	padding-bottom: 20px;
 	padding-left: 10px;
 	padding-right: 10px;
@@ -151,7 +110,10 @@ border-bottom-left-radius: 0px;
 }
 
 
+
+
 .who {
+	margin-bottom: 4px;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -172,9 +134,13 @@ border-bottom-left-radius: 0px;
 	}
 
 .imagepic {
-	width: 224px;
+	width: 228px;
 	height: 200px;
 	object-fit: cover;
+}
+
+.indextitle {
+text-align: center;
 }
 
 .bubble:hover {
@@ -184,6 +150,7 @@ border-bottom-left-radius: 0px;
 
 .bubble ul {
 	position: absolute;
+	margin-bottom: 5px;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -204,7 +171,7 @@ border-bottom-left-radius: 0px;
 	transform: scale(1);
 	transition: .1s;
 	opacity: 1;
-
+	padding-top: 30px;
 }
 
 .bubble ul li {
@@ -219,14 +186,18 @@ border-bottom-left-radius: 0px;
 .btn {
   display: inline-block;
   background-color: rgba(215, 175, 231, 0.945);
-  width: 160px;
+  width: 100px;
   padding: 0.8em;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-left: 60px;
   text-decoration: none;
   border-radius: 50px;
 	border: none;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
   -webkit-tap-highlight-color: transparent;
   transition: .3s ease-out;
+	text-align: center;
 }
 .btn:hover{
 	 cursor: pointer;

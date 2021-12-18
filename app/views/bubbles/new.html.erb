@@ -1,38 +1,44 @@
 
-<div class="newbubble-bg">
+
+
 
 <header class="site-header flex flex--bet">
    
-    <nav class="gnav">
-        <div class="gnav__menu flex flex--bet">
-            <div class="gnav__menu__item">
-            <%= link_to "新規投稿へ", new_bubble_path, class: "gnav__menu__item__link"  %>
-            </div>
-            <div class="gnav__menu__item">
-            <%= link_to "マイページ", user_path(current_user.id), class: "gnav__menu__item__link"  %>
-            </div>
-            <div class="gnav__menu__item">
-            <%= link_to "フォルダ一覧", folders_path, class: "gnav__menu__item__link" %>
-            </div>
-            <div class="gnav__menu__item">
-            <%= link_to "イベント", events_path, class: "gnav__menu__item__link" %>
-            </div>
-            <div class="gnav__menu__item">
-            <%= link_to "Bubble一覧に戻る", bubbles_path, class: "gnav__menu__item__link" %>
-            </div>
-        </div>
-    </nav>
+<nav class="gnav">
+		<div class="gnav__menu flex flex--bet">
+			<div class="left-box">
+				<%= link_to "STAYbubbles", root_path, class: "gnav__menu__logo"  %>
+			</div>
+			<div class="right-box">
+					<div class="gnav__menu__item">
+					<%= link_to "新規投稿へ", new_bubble_path, class: "gnav__menu__item__link"  %>
+					</div>
+					<div class="gnav__menu__item">
+					<%= link_to "マイページ", user_path(current_user.id), class: "gnav__menu__item__link"  %>
+					</div>
+					<div class="gnav__menu__item">
+					<%= link_to "フォルダ一覧", folders_path, class: "gnav__menu__item__link" %>
+					</div>
+					<div class="gnav__menu__item">
+					<%= link_to "イベント", events_path, class: "gnav__menu__item__link" %>
+					</div>
+					<div class="gnav__menu__item">
+					<%= link_to "Bubble一覧に戻る", bubbles_path, class: "gnav__menu__item__link" %>
+					</div>
+			</div>
+		</div>
+</nav>
 </header>
 
 
 
 <div class="newbubble">
-			<div class="bntop">STAYBUBBLE</div>
+			<div class="bntop">STAYbubbles</div>
 
 		<%= form_for @bubble do |f| %>
 			
 			<div class="field">
-				<%= f.text_field :title, placeholder: "タイトル", :size => 50 %>
+				<%= f.text_field :title, placeholder: "タイトル", autocomplete: 'off', :size => 50 %>
 				<%= f.label :title, "タイトル" %>
 			</div>
 
@@ -42,13 +48,14 @@
 			</div>
 
 		<div class="field">
-			<%= f.text_field :link, class: "link", placeholder: "リンク", :size => 50 %>
+			<%= f.text_field :link, class: "link", placeholder: "リンク", autocomplete: 'off', :size => 50 %>
 			<%= f.label :link, "リンク" %>	
 		</div>
 
-		<div class="field">
+		<div class="gazou_field">
 		<%= f.file_field :image , class: "gazou",  placeholder: "画像"%>
 		<%= f.label :image,"画像", class: "gazou-label" %>	
+		<div class="bottom-up"></div>
 		</div>
 
 		<div class="field">
@@ -57,10 +64,10 @@
 		</div>
 
 		<div class="send">
-			<%= f.submit "Bubble", class: "heart-button3" %>
+			<%= f.submit "bubble", class: "heart-button3" %>
 		</div>
 	<% end %>
 
 </div>
 
-</div>
+
