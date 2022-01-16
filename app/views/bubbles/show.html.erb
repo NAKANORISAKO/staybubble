@@ -51,7 +51,17 @@
 	<div class="in-bubble">
 			<p class="showtitle"><%= @bubble.title %></p>
 			<p><i class="fas fa-play-circle"></i> <%= @bubble.label %></p>
-			<p><i class="fas fa-link"></i> <%= @bubble.link %></p>
+
+
+			<p><i class="fas fa-link"></i>
+			
+		<% if @bubble.link.nil? %>
+			 <%= @bubble.link %>
+		<% else %>
+		<%= Rinku.auto_link(@bubble.link, :all, 'target="_blenk"').html_safe %>
+ 		<% end %>
+ 		</p>
+
 			<p><%= @bubble.date %></p>
 			<p><%= @bubble.content %></p>
 			<br>
@@ -70,5 +80,7 @@
 <% if user_signed_in? && current_user.id == @bubble.user_id %> 
 <%= link_to "編集する", edit_bubble_path(@bubble.id) %>
 <%= button_to "削除", bubble_path(@bubble.id), method: :delete  %>
+
+
 
 <% end %>	

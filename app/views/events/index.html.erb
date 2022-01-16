@@ -27,7 +27,7 @@
 </nav>
 </header>
 
-<div class="event-box">
+<div class"event-box">
 
 <%= month_calendar events: @events do |date, events| %>
   <%= date.day %>
@@ -55,11 +55,10 @@
 		</div>
 	<% end %>
 
-
 <% end %>
 
 <div class="ev-btn-box">
-<%= link_to new_event_path do %>
+<%= link_to  new_event_path do %>
     <div  class= "ev-btn"><i class="fas fa-plus"></i></div>		
 <% end %>	
 </div>

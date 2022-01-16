@@ -17,7 +17,7 @@
 					<%= link_to "フォルダ一覧", folders_path, class: "gnav__menu__item__link" %>
 					</div>
 					<div class="gnav__menu__item">
-					<%= link_to "イベント", events_path, class: "gnav__menu__item__link" %>
+					<%= link_to "イベント", events_path(current_user.id), class: "gnav__menu__item__link" %>
 					</div>
 					<div class="gnav__menu__item">
 					<%= link_to "Bubble一覧に戻る", bubbles_path, class: "gnav__menu__item__link" %>

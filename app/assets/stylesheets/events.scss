@@ -2,15 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.event-box  {
- margin-top: 80px;
-}
 
-.event-add {
-	margin-top: 80px;
-}
-.calender {
-	background-color: rgb(198, 191, 206);
+
+.simple-calendar {
+	margin-top: 65px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .ev-btn {
@@ -45,3 +42,121 @@
 	position: sticky;
 	bottom: 15px;
 }
+
+
+.tbody {
+	background-color: blanchedalmond;
+}
+
+.event-add-box {
+	margin-top: 80px;
+	display: flex;
+	justify-content: center;
+}
+
+.event-add {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 100px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #F9F9F9;
+  width: 450px;
+  height:360px;
+  border-radius: 3px;
+  box-shadow: 0 3px 36px 0 rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+
+#event_mark {
+ background-color:  rgba(215, 175, 231, 0.945);;
+	width: 200px;
+	padding-left: 10px;
+	text-align: center;
+	border-radius: 50px;
+}
+
+
+#event_start_time_1i {
+	width: 90px;
+	padding-left: 10px;
+	text-align: center;
+	border-radius: 50px;
+}
+
+#event_start_time_2i {
+	width: 100px;
+	padding-left: 10px;
+	text-align: center;
+	border-radius: 50px;
+}
+
+#event_start_time_3i  {
+	width: 70px;
+	padding-left: 10px;
+	text-align: center;
+	border-radius: 50px;
+}
+
+#event_start_time_4i  {
+	width: 70px;
+	padding-left: 10px;
+	text-align: center;
+	border-radius: 50px;
+}
+
+#event_start_time_5i  {
+	width: 70px;
+	padding-left: 10px;
+	text-align: center;
+	border-radius: 50px;
+}
+
+.event-add input[type="text"] {
+  font-size: 16px;
+  padding: 20px 20px;
+  height: 56px;
+  border: none;
+  border-bottom: solid 1px rgba(0, 0, 0,.1);
+  background: #fff;
+  min-width: 300px;
+  width: 370px;
+  box-sizing: border-box;
+  transition: all .3s linear;
+  color: #000;
+  font-weight: 400;
+}
+
+input:focus {
+  border-bottom: solid 1px ;
+  outline: 0;
+}
+
+
+.event-add input[type="submit"] {
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-color:  rgba(215, 175, 231, 0.945);
+	padding: 0;
+	text-decoration: none;
+	border: none;
+	border-radius: 50px;
+	height: 50px;
+	width: 100px;	
+	margin-top: 15px;
+
+	}
+	.event-add input[type="submit"]:hover {
+		cursor: pointer;
+		text-decoration: none;
+		 box-shadow: 0 5px 10px 0 rgba(0,0,0,0.12), 0 3px 20px 0 rgba(0,0,0,0.12), 0 5px 6px -2px rgba(0,0,0,0.2);
+		 border-radius: 50px;
+	color: rgba(66, 65, 65, 0.596);
+	}

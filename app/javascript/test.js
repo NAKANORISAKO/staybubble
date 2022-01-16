@@ -11,3 +11,4 @@ $(window).on('scroll',function(){
     }
     startPos = winScrollTop;
 });
+

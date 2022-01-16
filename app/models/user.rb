@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :bubbles, dependent: :destroy
   has_many :folders
+  has_many :events
   validates :name, presence: true
   validates :profile, length: { maximum: 200 }
   validates :oshiprofile, length: { maximum: 200 }

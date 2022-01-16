@@ -57,6 +57,8 @@ gem 'devise'
 gem 'carrierwave' , '~> 1.3' ,  '>= 1.3.1'
 gem 'cloudinary'
 gem 'dotenv-rails'
+gem 'rinku'
+gem 'jquery-rails', '4.3.3'
 gem 'simple_calendar', '~> 2.0'
 group :production do
   gem 'pg'

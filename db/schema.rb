@@ -28,7 +28,11 @@ ActiveRecord::Schema.define(version: 2021_11_06_114345) do
   create_table "events", force: :cascade do |t|
     t.string "title"
     t.text "content"
+    t.boolean "disp_flg"
     t.datetime "start_time"
+    t.datetime "end"
+    t.string "allDay"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "mark"
