@@ -1,24 +1,36 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+合言葉は、「推しはモチベーション！」
+推し活に励むファンをサポートするアプリ”StayBubble”
 
-Things you may want to cover:
+https://staybubble.herokuapp.com/
 
-* Ruby version
+好きなアイドルの言動に励まされている！
+...だけどあの動画や雑誌、いつ・どこにあるのだっけ？
+　 忘れないようにスクショしたけどアルバムに埋もれてるな...
 
-* System dependencies
+CDにライブ、活動が楽しみ！
+...でもどれがいつ？気が付いたら締め切りを過ぎてた！
 
-* Configuration
+記念日を祝いたい！
+...あれ、いつだっけ？
 
-* Database creation
+こんな悩みありませんか？その悩み全部”StayBubble”で解決できちゃいます！
 
-* Database initialization
+機能
+・投稿機能
+　①タイトル②YouTubeやVLIVEなどのプラットフォームメモ欄③URL入力欄④内容⑤写真
+ 5つの入力欄から、もう推しの尊い瞬間を見失わない！
+ 投稿はチェキやトレカのようなデザインで表示されるので、コレクション気分で楽しい！
 
-* How to run the test suite
+・フォルダ機能
+　アーティストや保存の項目に合わせてフォルダ分けが可能！必要な時に欲しい言葉を見つけやすい！
 
-* Services (job queues, cache servers, search engines, etc.)
+・カレンダー機能
+　誕生日や発売日など、アイコンと一緒に分かりやすく管理できる！
+ 
+・マイページ機能
+　自分だけでなく、推しのプロフィールも入力可能で２人っきりのページが幸せ！
+  好きになった日から今日までの日数もカウントされるので、毎日開いて確認したくなる！
 
-* Deployment instructions
 
-* ...
+アプリはこちらから：https://staybubble.herokuapp.com/
